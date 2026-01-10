@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/images/logo-favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>SreenPop</title>
+  </head>
+  <body class="hide-scrollbar hide-scrollbar::-webkit-scrollbar">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+      <div class="container-fluid">
+        <li class="nav-item">
+          <a class="navbar-brand m-0 d-flex align-items-center gap-1" href="#">
+            <img src="assets/images/logo.png" class="img-fluid nav-logo" alt="Logo" />
+            <p class="fs-3 mb-0 fw-bolder logo-gradient">ScreenPop</p>
+          </a>
+        </li>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse flex-grow-0"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <!-- HERO SECTION -->
+      <section class="container-fluid px-lg-5">
+        <div class="row gy-4">
+          <div class="col-md-8">
+            <div class="w-100">
+              <p class="accent-color-secondary">
+                // NOW PLAYING IN YOUR LIVING ROOM
+              </p>
+              <h1 class="h1-hero">
+                Doomscrolling
+                <br />
+                <span class="text-color-muted"> is out. </span>
+                <br />
+                <span>Cinema</span>
+                is in.
+              </h1>
+              <div class="w-50">
+                <p class="text-color-secondary mt-3 lh-base p-0">
+                  From cult classics to movies so bad they're good. Your curated
+                  library of 4,000+ films is ready. Pants optional.
+                </p>
+              </div>
+              <button class="hero-button">[ START THE SHOW ]</button>
+            </div>
+          </div>
+          <div class="col-md-4 position-relative d-flex align-items-center group">
+            <div class="position-absolute hero-image-wrapper hero-image-wrapper-left">
+              <img class="img-fluid hero-image" src="assets/images/movies/housemaid.jpg" alt="Housemaid" draggable="flase">
+            </div>
+            <div class="position-absolute hero-image-wrapper hero-image-wrapper-right">
+              <img class="img-fluid hero-image" src="assets/images/movies/martysupreme.jpeg" alt="Marty Supreme" draggable="flase">
+            </div>
+            <div class="position-absolute hero-image-wrapper animation-float">
+              <img class="img-fluid hero-image" src="assets/images/movies/avatar_fire_and_ash.jpg" alt="Avatar: Fire and Ash" draggable="flase">
+              <div class="position-absolute bottom-0 start-0 p-1 px-2 staff-pick">
+                STAFF PICK
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- HERO END -->
+
+      <!-- MOVIE CARDS -->
+      <section id="movies">
+        <div class="text-center movies-text"><h1>MOVIES</h1></div>
+        <div class="container">
+          <div class="filter-buttons d-flex justify-content-center align-items-center mt-5 mb-5">
+            <button class="filter-btn active rounded-pill" data-category="all">All</button>
+            <button class="filter-btn rounded-pill" data-category="action">Action</button>
+            <button class="filter-btn rounded-pill" data-category="sci-fi">Sci-Fi</button>
+            <button class="filter-btn rounded-pill" data-category="drama">Drama</button>
+            <button class="filter-btn rounded-pill" data-category="thriller">Thriller</button>
+            <button class="filter-btn rounded-pill" data-category="comedy">Comedy</button>
+          </div>
+          <div>
+            <div class="row gap-5 justify-content-center" id="movie-card-wrapper"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="assets/js/main.js"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
