@@ -53,7 +53,7 @@
     </nav>
     <main class="main">
       <!-- HERO SECTION -->
-      <section class="container-fluid px-lg-5">
+      <section class="px-lg-5">
         <div class="row gy-4">
           <div class="col-md-8">
             <div class="w-100">
@@ -74,18 +74,18 @@
                   library of 4,000+ films is ready. Pants optional.
                 </p>
               </div>
-              <button class="hero-button">[ START THE SHOW ]</button>
+              <button class="hero-button"><a href="#movies">[ START THE SHOW ]</a></button>
             </div>
           </div>
           <div class="col-md-4 position-relative d-flex align-items-center group">
             <div class="position-absolute hero-image-wrapper hero-image-wrapper-left">
-              <img class="img-fluid hero-image" src="assets/images/movies/housemaid.jpg" alt="Housemaid" draggable="flase">
+              <img class="img-fluid hero-image" src="assets/images/movies/housemaid.jpg" alt="Housemaid" draggable="false">
             </div>
             <div class="position-absolute hero-image-wrapper hero-image-wrapper-right">
-              <img class="img-fluid hero-image" src="assets/images/movies/martysupreme.jpeg" alt="Marty Supreme" draggable="flase">
+              <img class="img-fluid hero-image" src="assets/images/movies/martysupreme.jpeg" alt="Marty Supreme" draggable="false">
             </div>
             <div class="position-absolute hero-image-wrapper animation-float">
-              <img class="img-fluid hero-image" src="assets/images/movies/avatar_fire_and_ash.jpg" alt="Avatar: Fire and Ash" draggable="flase">
+              <img class="img-fluid hero-image" src="assets/images/movies/avatar_fire_and_ash.jpg" alt="Avatar: Fire and Ash" draggable="false">
               <div class="position-absolute bottom-0 start-0 p-1 px-2 staff-pick">
                 STAFF PICK
               </div>
@@ -93,23 +93,113 @@
           </div>
         </div>
       </section>
-      <!-- HERO END -->
 
       <!-- MOVIE CARDS -->
-      <section id="movies">
-        <div class="text-center movies-text"><h1>MOVIES</h1></div>
+      <section id="movies" class="border-top-custom">
+        <div class="mt-5">
+          <div class="text-center movies-text"><h1>MOVIES</h1></div>
+          <div class="container">
+            <div class="filter-buttons d-flex justify-content-center align-items-center mt-5 mb-5">
+              <button class="filter-btn active rounded-pill" data-category="all">All</button>
+              <button class="filter-btn rounded-pill" data-category="action">Action</button>
+              <button class="filter-btn rounded-pill" data-category="sci-fi">Sci-Fi</button>
+              <button class="filter-btn rounded-pill" data-category="drama">Drama</button>
+              <button class="filter-btn rounded-pill" data-category="thriller">Thriller</button>
+              <button class="filter-btn rounded-pill" data-category="comedy">Comedy</button>
+            </div>
+            <div>
+              <div class="row gap-5 justify-content-center" id="movie-card-wrapper"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- CONTACT SECTION -->
+      <section class="border-top-custom">
         <div class="container">
-          <div class="filter-buttons d-flex justify-content-center align-items-center mt-5 mb-5">
-            <button class="filter-btn active rounded-pill" data-category="all">All</button>
-            <button class="filter-btn rounded-pill" data-category="action">Action</button>
-            <button class="filter-btn rounded-pill" data-category="sci-fi">Sci-Fi</button>
-            <button class="filter-btn rounded-pill" data-category="drama">Drama</button>
-            <button class="filter-btn rounded-pill" data-category="thriller">Thriller</button>
-            <button class="filter-btn rounded-pill" data-category="comedy">Comedy</button>
-          </div>
-          <div>
-            <div class="row gap-5 justify-content-center" id="movie-card-wrapper"></div>
-          </div>
+          <h2 class="form-header-text">Leave a Review</h2>
+          <span class="success-message" id="successMessage"></span>
+          <form id="reviewForm">
+            
+            <!-- Text Input - Name -->
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Full Name*">
+              <span class="error-message" id="nameError"></span>
+            </div>
+            
+            <!-- Text Input - Email -->
+            <div class="form-group">
+              <input type="text" id="email" name="email" placeholder="E-mail*">
+              <span class="error-message" id="emailError"></span>
+            </div>
+            
+            <!-- Select Dropdown -->
+            <div class="form-group">
+              <label for="movieRating">Movie Rating *</label>
+              <select id="movieRating" name="movieRating">
+                <option value="">Select a rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Terrible</option>
+              </select>
+              <span class="error-message" id="ratingError"></span>
+            </div>
+            
+            <!-- Radio Buttons -->
+            <div class="form-group">
+              <label>Would you recommend? *</label>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="recommend" value="yes">
+                  Yes
+                </label>
+                <label>
+                  <input type="radio" name="recommend" value="no">
+                  No
+                </label>
+                <label>
+                  <input type="radio" name="recommend" value="maybe">
+                  Maybe
+                </label>
+              </div>
+              <span class="error-message" id="recommendError"></span>
+            </div>
+            
+            <!-- Checkboxes - full width -->
+            <div class="form-group full-width">
+              <label>What did you like? (Select all that apply)</label>
+              <div class="checkbox-group" style="flex-direction: row; flex-wrap: wrap; gap: 20px;">
+                <label>
+                  <input type="checkbox" name="liked" value="plot">
+                  Plot
+                </label>
+                <label>
+                  <input type="checkbox" name="liked" value="acting">
+                  Acting
+                </label>
+                <label>
+                  <input type="checkbox" name="liked" value="visuals">
+                  Visuals
+                </label>
+                <label>
+                  <input type="checkbox" name="liked" value="soundtrack">
+                  Soundtrack
+                </label>
+              </div>
+              <span class="error-message" id="likedError"></span>
+            </div>
+            
+            <!-- Textarea - Review - full width -->
+            <div class="form-group full-width">
+              <label for="review">Your Review *</label>
+              <textarea id="review" name="review" rows="5" placeholder="message"></textarea>
+              <span class="error-message" id="reviewError"></span>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Review</button>
+          </form>
         </div>
       </section>
     </main>
