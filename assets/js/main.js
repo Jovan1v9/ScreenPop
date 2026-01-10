@@ -85,9 +85,9 @@ const movies = [
     }
   ];
   const navLinks = [
-    { text: "Home", href: "#", active: true },
+    { text: "Home", href: "index.html", active: true },
     { text: "Movies", href: "#movies"},
-    { text: "Contact", href: "#contact" },
+    { text: "Review", href: "#review" },
     { text: "Author", href: "/author.html" },
     { icon: "bi bi-file-earmark-text", href: "#" },
     { icon: "bi bi-download", href: "#" }
@@ -131,8 +131,8 @@ function renderMovies(moviesToRender){
 
   moviesToRender.forEach(movie => {
     const movieCard = document.createElement('div');
-    movieCard.className = 'col-xl-3 col-lg-4 col-sm-6 movie-card';
-    movieCard.style.backgroundImage = `linear-gradient(180deg,rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0.63) 50%, rgba(0, 0, 0, 0.9) 90%), url('${movie.image}')`;
+    movieCard.className = 'col-lg-4 col-sm-6 movie-card';
+    movieCard.style.backgroundImage = `linear-gradient(180deg,rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.8) 55%, rgba(0, 0, 0, 1) 90%), url('${movie.image}')`;
     movieCard.innerHTML = `
     <div class="card-content">
         <h1 class="movie-title">${movie.name}</h1>
@@ -320,7 +320,7 @@ form.addEventListener('submit', (e) => {
     successMessage.textContent = '✓ Thank you for your review! Your submission was successful.';
 
     form.reset();
-    
+
     document.querySelectorAll('.error-message').forEach(error => error.textContent = '');
     document.querySelectorAll('.invalid').forEach(field => field.classList.remove('invalid'));
   } else {
