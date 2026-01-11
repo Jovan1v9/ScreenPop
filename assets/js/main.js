@@ -4,114 +4,114 @@ const movies = [
       description: "The latest chapter in the Avatar saga, following the Sully family as they face renewed threats on Pandora in a visually spectacular sci-fi adventure.",
       category: ["Sci-Fi", "Adventure", "Action"],
       rating: 8.1,
-      image: "assets/images/movies/avatar_fire_and_ash.jpg"
+      image: "assets/img/movies/avatar_fire_and_ash.jpg"
     },
     {
       name: "Zootopia 2",
       description: "Judy Hopps and Nick Wilde return to crack a major criminal case in a lively, record-breaking animated sequel praised for its humor and heart.",
       category: ["Animation", "Family", "Comedy"],
       rating: 8.4,
-      image: "assets/images/movies/zootopia2.jpg"
+      image: "assets/img/movies/zootopia2.jpg"
     },
     {
       name: "Superman",
       description: "A new DC Universe takes flight as Clark Kent navigates life in Metropolis while battling a powerful foe in this modern superhero reboot.",
       category: ["Superhero", "Action", "Sci-Fi"],
       rating: 7.1,
-      image: "assets/images/movies/superman.jpg"
+      image: "assets/img/movies/superman.jpg"
     },
     {
       name: "Sinners",
       description: "A genre-blending supernatural horror set in the Mississippi Delta, starring Michael B. Jordan in a dual role confronting dark forces and family legacies.",
       category: ["Superhero", "Action", "Sci-Fi"],
       rating: 7.5,
-      image: "assets/images/movies/sinners.jpg"
+      image: "assets/img/movies/sinners.jpg"
     },
     {
       name: "Jurassic World: Rebirth",
       description: "The dinosaurs are back in a thrilling new chapter of the Jurassic franchise, mixing action and awe in globe-trotting adventure.",
       category: ["Action", "Adventure", "Sci-Fi"],
       rating: 7.3,
-      image: "assets/images/movies/jurassic_world_rebirth.jpg"
+      image: "assets/img/movies/jurassic_world_rebirth.jpg"
     },
     {
       name: "Mission: Impossible – The Final Reckoning",
       description: "Ethan Hunt and his IMF team face their toughest mission yet in this action-packed finale of the long-running spy franchise.",
       category: ["Action", "Thriller", "Spy"],
       rating: 7.8,
-      image: "assets/images/movies/mission_impossible.jpg"
+      image: "assets/img/movies/mission_impossible.jpg"
     },
     {
       name: "The Rip",
       description: "A high-stakes Netflix crime thriller following Miami cops navigating betrayal and buried cash in a tense cat-and-mouse story.",
       category: ["Crime", "Thriller", "Drama"],
       rating: 7.0,
-      image: "assets/images/movies/the_rip.jpg"
+      image: "assets/img/movies/the_rip.jpg"
     },
     {
       name: "Send Help",
       description: "A survival thriller about two plane-crash survivors stranded on a remote island, forced to rely on each other to stay alive.",
       category: ["Thriller", "Survival", "Drama"],
       rating: 7.2,
-      image: "assets/images/movies/send_help.jpg"
+      image: "assets/img/movies/send_help.jpg"
     },
     {
       name: "Avengers: Doomsday",
       description: "The MCU’s epic return featuring Earth’s Mightiest Heroes facing an apocalyptic threat that could end reality as they know it.",
       category: ["Superhero", "Action", "Sci-Fi"],
       rating: 8.5,
-      image: "assets/images/movies/avengers_doomsday.jpg"
+      image: "assets/img/movies/avengers_doomsday.jpg"
     },
     {
       name: "Project Hail Mary",
       description: "A hard-science sci-fi adaptation starring Ryan Gosling as a lone astronaut on a desperate mission to save Earth from extinction.",
       category: ["Sci-Fi", "Drama", "Adventure"],
       rating: 8.0,
-      image: "assets/images/movies/project_hail_mary.jpeg"
+      image: "assets/img/movies/project_hail_mary.jpeg"
     },
     {
       name: "Toy Story 5",
       description: "Woody, Buzz and the gang embark on another emotional journey as the beloved Pixar franchise continues.",
       category: ["Animation", "Family", "Adventure"],
       rating: 8.0,
-      image: "assets/images/movies/toy_story_five.jpg"
+      image: "assets/img/movies/toy_story_five.jpg"
     },
     {
       name: "The Odyssey",
       description: "A large-scale cinematic retelling of Homer’s epic, following Odysseus on his perilous journey home after the Trojan War.",
       category: ["Epic", "Adventure", "Drama"],
       rating: 7.7,
-      image: "assets/images/movies/the_odyssey.jpg"
+      image: "assets/img/movies/the_odyssey.jpg"
     }
   ];
   const carouselSlides = [
     {
-      image: 'assets/images/carousel/scene1.jpg',
+      image: 'assets/img/carousel/scene1.jpg',
       title: 'Avatar: Fire and Ash',
       description: 'Epic sci-fi adventure continues on Pandora'
     },
     {
-      image: 'assets/images/carousel/scene2.jpg',
+      image: 'assets/img/carousel/scene2.jpg',
       title: 'The Conjuring: Last Rites',
       description: 'Paranormal investigators Ed and Lorraine Warren take on one last terrifying case'
     },
     {
-      image: 'assets/images/carousel/scene3.jpg',
+      image: 'assets/img/carousel/scene3.jpg',
       title: 'Superman',
       description: 'The Man of Steel rises again in this modern reboot'
     },
     {
-      image: 'assets/images/carousel/scene4.jpg',
+      image: 'assets/img/carousel/scene4.jpg',
       title: 'F1: The Movie',
       description: 'A Formula One driver comes out of retirement to mentor and team up with a younger driver.'
     },
     {
-      image: 'assets/images/carousel/scene5.jpg',
+      image: 'assets/img/carousel/scene5.jpg',
       title: 'Dune: Part Two',
       description: 'The epic saga continues across the desert planet'
     },
     {
-      image: 'assets/images/carousel/scene6.jpg',
+      image: 'assets/img/carousel/scene6.jpg',
       title: 'Spider-Man: Beyond the Spider-Verse',
       description: 'Miles Morales swings into a new adventure'
     }
