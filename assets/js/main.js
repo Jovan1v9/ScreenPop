@@ -137,9 +137,11 @@ const navLinks = [
 ];
 const footerLinks = [
   { text: "Home", href: "index.html" },
+  { text: "About Us", href: "index.html#about" },
   { text: "Movies", href: "index.html#movies" },
+  { text: "Gallery", href: "index.html#gallery" },
   { text: "Review", href: "index.html#review-anchor" },
-  { text: "Author", href: "/author.html" }
+  { text: "Author", href: "ScreenPop/author.html" },
 ]
 const ratingOptions = [
   { value: "", text: "Select a rating" },
