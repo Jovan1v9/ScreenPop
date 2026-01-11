@@ -131,7 +131,7 @@ const navLinks = [
   { text: "Movies", href: "index.html#movies" },
   { text: "Gallery", href: "index.html#gallery" },
   { text: "Review", href: "index.html#review-anchor" },
-  { text: "Author", href: "/author.html" },
+  { text: "Author", href: "ScreenPop/author.html" },
   { icon: "bi bi-file-earmark-text", href: "#" },
   { icon: "bi bi-download", href: "#" }
 ];
