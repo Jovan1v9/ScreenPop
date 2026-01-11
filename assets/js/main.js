@@ -126,22 +126,22 @@ const filterBtns = [
 
 ]
 const navLinks = [
-  { text: "Home", href: "index.html" },
-  { text: "About Us", href: "index.html#about" },
-  { text: "Movies", href: "index.html#movies" },
-  { text: "Gallery", href: "index.html#gallery" },
-  { text: "Review", href: "index.html#review-anchor" },
-  { text: "Author", href: "/author.html" },
-  { icon: "bi bi-file-earmark-text", href: "#" },
-  { icon: "bi bi-download", href: "#" }
+  { text: "Home", href: "./index.html" },
+  { text: "About Us", href: "./index.html#about" },
+  { text: "Movies", href: "./index.html#movies" },
+  { text: "Gallery", href: "./index.html#gallery" },
+  { text: "Review", href: "./index.html#review-anchor" },
+  { text: "Author", href: "./author.html" },
+  { icon: "bi bi-file-earmark-text", href: "./dokumentacija.pdf" },
+  { icon: "bi bi-download", href: "./project.zip" }
 ];
 const footerLinks = [
-  { text: "Home", href: "index.html" },
-  { text: "About Us", href: "index.html#about" },
-  { text: "Movies", href: "index.html#movies" },
-  { text: "Gallery", href: "index.html#gallery" },
-  { text: "Review", href: "index.html#review-anchor" },
-  { text: "Author", href: "/author.html" },
+  { text: "Home", href: "./index.html" },
+  { text: "About Us", href: "./index.html#about" },
+  { text: "Movies", href: "./index.html#movies" },
+  { text: "Gallery", href: "./index.html#gallery" },
+  { text: "Review", href: "./index.html#review-anchor" },
+  { text: "Author", href: "./author.html" },
 ]
 const ratingOptions = [
   { value: "", text: "Select a rating" },

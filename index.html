@@ -1,289 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScreenPop | Explore Popular Movies & Film Library</title>
+    <meta
+      name="description"
+      content="ScreenPop is your ultimate movie library. Browse and discover the most popular films, read descriptions, check ratings, and explore new releases."
+    />
+    <meta
+      name="keywords"
+      content="movies, movie library, popular movies 2026, film reviews, movie ratings, latest releases"
+    />
+    <meta name="author" content="ScreenPop" />
+    <meta name="robots" content="index, follow" />
 
-  <title>ScreenPop | Explore Popular Movies & Film Library</title>
-  <meta name="description"
-    content="ScreenPop is your ultimate movie library. Browse and discover the most popular films, read descriptions, check ratings, and explore new releases." />
-  <meta name="keywords"
-    content="movies, movie library, popular movies 2026, film reviews, movie ratings, latest releases" />
-  <meta name="author" content="ScreenPop" />
-  <meta name="robots" content="index, follow" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
 
-  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="canonical" href="https://jovan1v9.github.io/ScreenPop/" />
 
-  <link rel="canonical" href="https://jovan1v9.github.io/ScreenPop/">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  </head>
 
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-    <div class="container-fluid">
-      <li class="nav-item">
-        <a class="navbar-brand m-0 d-flex align-items-center gap-1" href="#">
-          <img src="assets/img/logo.png" class="img-fluid nav-logo" alt="Logo" />
-          <p class="fs-3 mb-0 fw-bolder logo-gradient">ScreenPop</p>
-        </a>
-      </li>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
-        </ul>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+      <div class="container-fluid">
+        <li class="nav-item">
+          <a class="navbar-brand m-0 d-flex align-items-center gap-1" href="#">
+            <img
+              src="assets/img/logo.png"
+              class="img-fluid nav-logo"
+              alt="Logo"
+            />
+            <p class="fs-3 mb-0 fw-bolder logo-gradient">ScreenPop</p>
+          </a>
+        </li>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse flex-grow-0"
+          id="navbarSupportedContent"
+        >
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center gap-3"
+          ></ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <main class="main">
-    <!-- HERO SECTION -->
-    <section class="px-lg-5">
-      <div class="row gy-4 hero-wrap">
-        <div class="col-md-8">
-          <div class="w-100">
-            <p class="accent-color-secondary">
-              // NOW PLAYING IN YOUR LIVING ROOM
-            </p>
-            <h1 class="h1-hero">
-              Doomscrolling
-              <br />
-              <span class="text-color-muted"> is out. </span>
-              <br />
-              <span>Cinema</span>
-              is in.
-            </h1>
-            <div class="w-50">
-              <p class="text-color-secondary mt-3 lh-base p-0">
-                From cult classics to movies so bad they're good. Your curated
-                library of 4,000+ films is ready. Pants optional.
+    </nav>
+    <main class="main">
+      <!-- HERO SECTION -->
+      <section class="px-lg-5">
+        <div class="row gy-4 hero-wrap">
+          <div class="col-md-8">
+            <div class="w-100">
+              <p class="accent-color-secondary">
+                // NOW PLAYING IN YOUR LIVING ROOM
               </p>
-            </div>
-            <button class="hero-button"><a href="#movies">[ START THE SHOW ]</a></button>
-          </div>
-        </div>
-        <div class="col-md-4 position-relative d-flex align-items-center group">
-          <div class="position-absolute hero-image-wrapper hero-image-wrapper-left">
-            <img class="img-fluid hero-image" src="assets/img/movies/housemaid.jpg" alt="Housemaid" draggable="false">
-          </div>
-          <div class="position-absolute hero-image-wrapper hero-image-wrapper-right">
-            <img class="img-fluid hero-image" src="assets/img/movies/martysupreme.jpeg" alt="Marty Supreme"
-              draggable="false">
-          </div>
-          <div class="position-absolute hero-image-wrapper animation-float">
-            <img class="img-fluid hero-image" src="assets/img/movies/avatar_fire_and_ash.jpg" alt="Avatar: Fire and Ash"
-              draggable="false">
-            <div class="position-absolute bottom-0 start-0 p-1 px-2 staff-pick">
-              STAFF PICK
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="about"></div>
-    </section>
-
-    <section class="about-section py-5 border-top-custom">
-      <div class="container-fluid px-5 movies-text">
-        <h2 class="text-center mb-5">About Us</h2>
-        <div class="row g-5 mt-5">
-
-          <!-- Card 1 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="about-card">
-              <i class="bi bi-film"></i>
-              <h4>Our Mission</h4>
-              <div class="about-content" id="mission">
-                <p>We're dedicated to bringing you honest, in-depth movie reviews that help you discover your next
-                  favorite film. Our team of passionate cinephiles watches and analyzes hundreds of movies each year to
-                  provide you with the most comprehensive reviews.</p>
+              <h1 class="h1-hero">
+                Doomscrolling
+                <br />
+                <span class="text-color-muted"> is out. </span>
+                <br />
+                <span>Cinema</span>
+                is in.
+              </h1>
+              <div class="w-50">
+                <p class="text-color-secondary mt-3 lh-base p-0">
+                  From cult classics to movies so bad they're good. Your curated
+                  library of 4,000+ films is ready. Pants optional.
+                </p>
               </div>
-              <button class="expand-btn" data-target="mission">
-                <span class="expand-text">Read More</span>
-                <i class="bi bi-chevron-down"></i>
+              <button class="hero-button">
+                <a href="#movies">[ START THE SHOW ]</a>
               </button>
             </div>
           </div>
-
-          <!-- Card 2 -->
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="about-card">
-              <i class="bi bi-people"></i>
-              <h4>Our Team</h4>
-              <div class="about-content" id="team">
-                <p>Our diverse team includes film critics, entertainment journalists, and movie enthusiasts from around
-                  the world. Each brings their unique perspective and expertise to create well-rounded, insightful
-                  reviews that cater to all types of movie lovers.</p>
+          <div
+            class="col-md-4 position-relative d-flex align-items-center group"
+          >
+            <div
+              class="position-absolute hero-image-wrapper hero-image-wrapper-left"
+            >
+              <img
+                class="img-fluid hero-image"
+                src="assets/img/movies/housemaid.jpg"
+                alt="Housemaid"
+                draggable="false"
+              />
+            </div>
+            <div
+              class="position-absolute hero-image-wrapper hero-image-wrapper-right"
+            >
+              <img
+                class="img-fluid hero-image"
+                src="assets/img/movies/martysupreme.jpeg"
+                alt="Marty Supreme"
+                draggable="false"
+              />
+            </div>
+            <div class="position-absolute hero-image-wrapper animation-float">
+              <img
+                class="img-fluid hero-image"
+                src="assets/img/movies/avatar_fire_and_ash.jpg"
+                alt="Avatar: Fire and Ash"
+                draggable="false"
+              />
+              <div
+                class="position-absolute bottom-0 start-0 p-1 px-2 staff-pick"
+              >
+                STAFF PICK
               </div>
-              <button class="expand-btn" data-target="team">
-                <span class="expand-text">Read More</span>
-                <i class="bi bi-chevron-down"></i>
-              </button>
             </div>
           </div>
+        </div>
+        <div id="about"></div>
+      </section>
 
-          <!-- Card 3 -->
-          <div class="col-lg-4 col-md-12 col-sm-12">
-            <div class="about-card">
-              <i class="bi bi-star"></i>
-              <h4>Why Trust Us</h4>
-              <div class="about-content" id="trust">
-                <p>With over 10 years of experience and thousands of reviews published, we've built a reputation for
-                  unbiased, thoughtful criticism. We don't accept payment for reviews and maintain complete editorial
-                  independence to ensure our opinions remain genuine.</p>
+      <section class="about-section py-5 border-top-custom">
+        <div class="container-fluid px-5 movies-text">
+          <h2 class="text-center mb-5">About Us</h2>
+          <div class="row g-5 mt-5">
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="about-card">
+                <i class="bi bi-film"></i>
+                <h4>Our Mission</h4>
+                <div class="about-content" id="mission">
+                  <p>
+                    We're dedicated to bringing you honest, in-depth movie
+                    reviews that help you discover your next favorite film. Our
+                    team of passionate cinephiles watches and analyzes hundreds
+                    of movies each year to provide you with the most
+                    comprehensive reviews.
+                  </p>
+                </div>
+                <button class="expand-btn" data-target="mission">
+                  <span class="expand-text">Read More</span>
+                  <i class="bi bi-chevron-down"></i>
+                </button>
               </div>
-              <button class="expand-btn" data-target="trust">
-                <span class="expand-text">Read More</span>
-                <i class="bi bi-chevron-down"></i>
-              </button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="about-card">
+                <i class="bi bi-people"></i>
+                <h4>Our Team</h4>
+                <div class="about-content" id="team">
+                  <p>
+                    Our diverse team includes film critics, entertainment
+                    journalists, and movie enthusiasts from around the world.
+                    Each brings their unique perspective and expertise to create
+                    well-rounded, insightful reviews that cater to all types of
+                    movie lovers.
+                  </p>
+                </div>
+                <button class="expand-btn" data-target="team">
+                  <span class="expand-text">Read More</span>
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <div class="about-card">
+                <i class="bi bi-star"></i>
+                <h4>Why Trust Us</h4>
+                <div class="about-content" id="trust">
+                  <p>
+                    With over 10 years of experience and thousands of reviews
+                    published, we've built a reputation for unbiased, thoughtful
+                    criticism. We don't accept payment for reviews and maintain
+                    complete editorial independence to ensure our opinions
+                    remain genuine.
+                  </p>
+                </div>
+                <button class="expand-btn" data-target="trust">
+                  <span class="expand-text">Read More</span>
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </div>
             </div>
           </div>
-
         </div>
-      </div>
-      <div id="movies"></div>
-    </section>
+        <div id="movies"></div>
+      </section>
 
-    <!-- MOVIE CARDS -->
-    <section id="movies" class="border-top-custom">
-      <div class="mt-5">
-        <div class="text-center movies-text">
-          <h2>FEATURED MOVIES</h2>
+      <!-- MOVIE CARDS -->
+      <section id="movies" class="border-top-custom">
+        <div class="mt-5">
+          <div class="text-center movies-text">
+            <h2>FEATURED MOVIES</h2>
+          </div>
+          <div class="container">
+            <div
+              class="filter-buttons d-flex justify-content-center align-items-center mt-5 mb-5"
+            ></div>
+            <div>
+              <div
+                class="row gap-5 justify-content-center"
+                id="movie-card-wrapper"
+              ></div>
+            </div>
+          </div>
         </div>
+        <div id="gallery"></div>
+      </section>
+
+      <section class="carousel-section py-5 border-top-custom mb-5">
+        <div class="container-fluid px-0 mt-5">
+          <div class="carousel-wrapper position-relative">
+            <div class="carousel-container overflow-hidden">
+              <div class="carousel-track" id="carouselTrack"></div>
+            </div>
+
+            <button
+              class="carousel-arrow carousel-arrow-left position-absolute top-50 start-0 translate-middle-y"
+              id="prevBtn"
+            >
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button
+              class="carousel-arrow carousel-arrow-right position-absolute top-50 end-0 translate-middle-y"
+              id="nextBtn"
+            >
+              <i class="bi bi-chevron-right"></i>
+            </button>
+
+            <div
+              class="carousel-indicators d-flex justify-content-center mt-3"
+              id="carouselIndicators"
+            ></div>
+          </div>
+        </div>
+        <div id="review-anchor"></div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="border-top-custom">
         <div class="container">
-          <div class="filter-buttons d-flex justify-content-center align-items-center mt-5 mb-5">
-          </div>
-          <div>
-            <div class="row gap-5 justify-content-center" id="movie-card-wrapper"></div>
-          </div>
+          <h2 class="form-header-text">Leave a Review</h2>
+          <span class="success-message" id="successMessage"></span>
+          <form id="reviewForm">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Full Name*"
+                autocomplete="off"
+              />
+              <span class="error-message" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="E-mail*"
+                autocomplete="off"
+              />
+              <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group" id="rating-form-group">
+              <label for="movieRating">Movie Rating *</label>
+
+              <span class="error-message" id="ratingError"></span>
+            </div>
+
+            <div class="form-group">
+              <label>Would you recommend? *</label>
+
+              <span class="error-message" id="recommendError"></span>
+            </div>
+
+            <div class="form-group full-width">
+              <label>What did you like? (Select all that apply)</label>
+
+              <span class="error-message" id="likedError"></span>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="review">Your Review *</label>
+              <textarea
+                id="review"
+                name="review"
+                rows="5"
+                placeholder="review"
+              ></textarea>
+              <span class="error-message" id="reviewError"></span>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Review</button>
+          </form>
         </div>
-      </div>
-      <div id="gallery"></div>
-    </section>
+      </section>
+      <!-- FOOTER -->
+      <footer class="footer border-top-custom">
+        <div class="container pt-5">
+          <div class="row g-4 text-center">
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <a href="index.html"
+                ><img
+                  src="./assets/img/logo.png"
+                  class="img-fluid footer-picture"
+                  alt="Logo"
+              /></a>
+            </div>
 
-    <section class="carousel-section py-5 border-top-custom mb-5">
-      <div class="container-fluid px-0 mt-5">
+            <div class="col-lg-4 col-md-6">
+              <h3 class="mb-3">Quick Links</h3>
+              <ul class="list-unstyled quick-links navbar-nav"></ul>
+            </div>
 
-        <div class="carousel-wrapper position-relative">
-          <div class="carousel-container overflow-hidden">
-            <div class="carousel-track" id="carouselTrack">
+            <div class="col-lg-4 col-md-6 social-media">
+              <h3 class="mb-3" id="social-text">Follow Us</h3>
 
+              <a href="mailto:contact@screenpop.com">contact@screenpop.com</a>
             </div>
           </div>
 
-          <button class="carousel-arrow carousel-arrow-left position-absolute top-50 start-0 translate-middle-y"
-            id="prevBtn">
-            <i class="bi bi-chevron-left"></i>
-          </button>
-          <button class="carousel-arrow carousel-arrow-right position-absolute top-50 end-0 translate-middle-y"
-            id="nextBtn">
-            <i class="bi bi-chevron-right"></i>
-          </button>
-
-          <div class="carousel-indicators d-flex justify-content-center mt-3" id="carouselIndicators">
-
+          <div class="row mb-2">
+            <div
+              class="col-12 pt-4 copyright d-flex gap-5 justify-content-center"
+            >
+              <a href="#">
+                <i class="bi bi-file-earmark-text"></i>
+                Documentation
+              </a>
+              <p class="mb-0">&copy; 2026 ScreenPop. All rights reserved.</p>
+              <a href="#">
+                <i class="i bi-download"></i>
+                Zip
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div id="review-anchor"></div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="border-top-custom">
-      <div class="container">
-        <h2 class="form-header-text">Leave a Review</h2>
-        <span class="success-message" id="successMessage"></span>
-        <form id="reviewForm">
-
-          <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="Full Name*" autocomplete="off">
-            <span class="error-message" id="nameError"></span>
-          </div>
-
-          <div class="form-group">
-            <input type="text" id="email" name="email" placeholder="E-mail*" autocomplete="off">
-            <span class="error-message" id="emailError"></span>
-          </div>
-
-          <div class="form-group" id="rating-form-group">
-            <label for="movieRating">Movie Rating *</label>
-
-            <span class="error-message" id="ratingError"></span>
-          </div>
-
-          <div class="form-group">
-            <label>Would you recommend? *</label>
-
-            <span class="error-message" id="recommendError"></span>
-          </div>
-
-          <div class="form-group full-width">
-            <label>What did you like? (Select all that apply)</label>
-
-            <span class="error-message" id="likedError"></span>
-          </div>
-
-          <div class="form-group full-width">
-            <label for="review">Your Review *</label>
-            <textarea id="review" name="review" rows="5" placeholder="review"></textarea>
-            <span class="error-message" id="reviewError"></span>
-          </div>
-
-          <button type="submit" class="submit-btn">Submit Review</button>
-        </form>
-      </div>
-    </section>
-    <!-- FOOTER -->
-    <footer class="footer border-top-custom">
-      <div class="container pt-5">
-        <div class="row g-4 text-center">
-
-          <div class="col-lg-4 col-md-6">
-            <a href="index.html"><img src="/assets/img/logo.png" class="img-fluid footer-picture" alt="Logo"></a>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <h3 class="mb-3">Quick Links</h3>
-            <ul class="list-unstyled quick-links navbar-nav">
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 social-media">
-            <h3 class="mb-3" id="social-text">Follow Us</h3>
-
-            <a href="mailto:contact@screenpop.com">contact@screenpop.com</a>
-          </div>
-
-        </div>
-
-        <div class="row mb-2">
-          <div class="col-12 pt-4 copyright d-flex gap-5 justify-content-center">
-            <a href="#">
-              <i class="bi bi-file-earmark-text"></i>
-              Documentation
-            </a>
-            <p class="mb-0">&copy; 2026 ScreenPop. All rights reserved.</p>
-            <a href="#">
-              <i class="i bi-download"></i>
-              Zip
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </main>
-  <script src="assets/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-</body>
-
+      </footer>
+    </main>
+    <script src="assets/js/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
