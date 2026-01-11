@@ -84,6 +84,38 @@ const movies = [
       image: "assets/images/movies/the_odyssey.jpg"
     }
   ];
+  const carouselSlides = [
+    {
+      image: 'assets/images/carousel/scene1.jpg',
+      title: 'Avatar: Fire and Ash',
+      description: 'Epic sci-fi adventure continues on Pandora'
+    },
+    {
+      image: 'assets/images/carousel/scene2.jpg',
+      title: 'The Conjuring: Last Rites',
+      description: 'Paranormal investigators Ed and Lorraine Warren take on one last terrifying case'
+    },
+    {
+      image: 'assets/images/carousel/scene3.jpg',
+      title: 'Superman',
+      description: 'The Man of Steel rises again in this modern reboot'
+    },
+    {
+      image: 'assets/images/carousel/scene4.jpg',
+      title: 'F1: The Movie',
+      description: 'A Formula One driver comes out of retirement to mentor and team up with a younger driver.'
+    },
+    {
+      image: 'assets/images/carousel/scene5.jpg',
+      title: 'Dune: Part Two',
+      description: 'The epic saga continues across the desert planet'
+    },
+    {
+      image: 'assets/images/carousel/scene6.jpg',
+      title: 'Spider-Man: Beyond the Spider-Verse',
+      description: 'Miles Morales swings into a new adventure'
+    }
+  ];
   const filterBtns = [
     { text: "All", data: "all" },
     { text: "Action", data: "action" },
@@ -97,6 +129,7 @@ const movies = [
     { text: "Home", href: "index.html"},
     { text: "About Us", href:"index.html#about"},
     { text: "Movies", href: "index.html#movies"},
+    { text: "Gallery", href: "index.html#gallery"},
     { text: "Review", href: "index.html#review-anchor" },
     { text: "Author", href: "/author.html" },
     { icon: "bi bi-file-earmark-text", href: "#" },
@@ -108,6 +141,26 @@ const movies = [
     { text: "Review", href: "index.html#review-anchor" },
     { text: "Author", href: "/author.html" }
   ]
+  const ratingOptions = [
+    { value: "", text: "Select a rating" },
+    { value: "5", text: "5 - Excellent" },
+    { value: "4", text: "4 - Good" },
+    { value: "3", text: "3 - Average" },
+    { value: "2", text: "2 - Poor" },
+    { value: "1", text: "1 - Terrible" }
+  ];
+  const recommendOptions = [
+    { value: "yes", text: "Yes" },
+    { value: "no", text: "No" },
+    { value: "maybe", text: "Maybe" }
+  ];
+  const likedOptions = [
+    { value: "plot", text: "Plot" },
+    { value: "acting", text: "Acting" },
+    { value: "visuals", text: "Visuals" },
+    { value: "soundtrack", text: "Soundtrack" }
+  ];
+  const socials = ['bi bi-facebook', 'bi bi-twitter', 'bi bi-instagram', 'bi bi-youtube'];
 ////////////////////
 ////////////////////
 // RENDEROVANJE NAVIGACIONIH LINKOVA
@@ -239,9 +292,84 @@ filterButtons.forEach(button => {
   });
 });
 
+//RENDEROVANJE DDL-a, CHECKBOX-a I RADIO BUTTON-a
+function renderSelect(errorSpanId, options, selectId,selectName) {
+  const errorSpan = document.getElementById(errorSpanId);
+  const formGroup = errorSpan.parentElement;
+  
+  const select = document.createElement('select');
+  select.id = selectId;
+  select.name = selectName;
+  
+  options.forEach(option => {
+    const opt = document.createElement('option');
+    opt.value = option.value;
+    opt.textContent = option.text;
+    select.appendChild(opt);
+  });
+  
+  formGroup.insertBefore(select, errorSpan);
+}
+
+function renderRadioButtons(errorSpanId, options, groupName) {
+  const errorSpan = document.getElementById(errorSpanId);
+  const formGroup = errorSpan.parentElement;
+  
+  const container = document.createElement('div');
+  container.className = 'radio-group';
+  
+  options.forEach(option => {
+    const label = document.createElement('label');
+    
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = groupName;
+    input.value = option.value;
+    
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(' ' + option.text));
+    
+    container.appendChild(label);
+  });
+  
+  formGroup.insertBefore(container, errorSpan);
+}
+
+function renderCheckboxes(errorSpanId, options, groupName) {
+  const errorSpan = document.getElementById(errorSpanId);
+  const formGroup = errorSpan.parentElement;
+  
+  const container = document.createElement('div');
+  container.className = 'checkbox-group';
+  container.style.flexDirection = 'row';
+  container.style.flexWrap = 'wrap';
+  container.style.gap = '20px';
+  
+  options.forEach(option => {
+    const label = document.createElement('label');
+    
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.name = groupName;
+    input.value = option.value;
+    
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(' ' + option.text));
+    
+    container.appendChild(label);
+  });
+  
+  formGroup.insertBefore(container, errorSpan);
+}
+
+
 //VALIDACIJA FORME
 const form = document.getElementById('reviewForm');
 if(form){
+  renderSelect('ratingError', ratingOptions, 'movieRating', 'movieRating');
+  renderRadioButtons('recommendError', recommendOptions, 'recommend');
+  renderCheckboxes('likedError', likedOptions, 'liked');
+
   const fullNameRegex = /^[A-ZČĆĐŠŽ][a-zčćđšž]{2,10}\s[A-ZČĆĐŠŽ][a-zčćđšž]{3,12}$/;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const reviewRegex = /^.{10,200}$/;
@@ -401,5 +529,151 @@ if(form){
     }
   });
 }
+// CAROUSEL
+let currentSlide = 0;
+let autoPlayInterval;
+let slidesPerView = window.innerWidth > 768 ? 2 : 1;
+
+window.addEventListener('resize', () => {
+  const newSlidesPerView = window.innerWidth > 768 ? 2 : 1;
+  if (newSlidesPerView !== slidesPerView) {
+    slidesPerView = newSlidesPerView;
+    currentSlide = 0;
+    updateIndicators();
+    updateCarousel();
+  }
+});
+
+function renderCarousel() {
+  const track = document.getElementById('carouselTrack');
+  const indicatorsContainer = document.getElementById('carouselIndicators');
+  
+  if (!track) return;
+  
+  track.innerHTML = '';
+  carouselSlides.forEach((slide) => {
+    const slideDiv = document.createElement('div');
+    slideDiv.className = 'carousel-slide';
+    slideDiv.innerHTML = `
+      <img src="${slide.image}" alt="${slide.title}">
+      <div class="carousel-caption">
+        <h5>${slide.title}</h5>
+        <p>${slide.description}</p>
+      </div>
+    `;
+    track.appendChild(slideDiv);
+  });
+  
+  updateIndicators();
+}
+
+function updateIndicators() {
+  const indicatorsContainer = document.getElementById('carouselIndicators');
+  if (!indicatorsContainer) return;
+
+  indicatorsContainer.innerHTML = '';
+  const totalPages = Math.ceil(carouselSlides.length / slidesPerView);
+
+  for (let i = 0; i < totalPages; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot';
+
+    if (i === currentSlide) {
+      dot.classList.add('active');
+    }
+
+    dot.addEventListener('click', () => {
+      goToSlide(i);
+    });
+
+    indicatorsContainer.appendChild(dot);
+  }
+}
+
+function updateCarousel() {
+  const track = document.getElementById('carouselTrack');
+  const dots = document.querySelectorAll('.carousel-dot');
+
+  const movePercentage = currentSlide * 100;
+  track.style.transform = `translateX(-${movePercentage}%)`;
+
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentSlide);
+  });
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  updateCarousel();
+  resetAutoPlay();
+}
+
+function nextSlide() {
+  const totalPages = Math.ceil(carouselSlides.length / slidesPerView);
+  currentSlide = (currentSlide + 1) % totalPages;
+  updateCarousel();
+}
+
+function prevSlide() {
+  const totalPages = Math.ceil(carouselSlides.length / slidesPerView);
+  currentSlide = (currentSlide - 1 + totalPages) % totalPages;
+  updateCarousel();
+}
+
+function startAutoPlay() {
+  stopAutoPlay();
+  autoPlayInterval = setInterval(nextSlide, 6000);
+}
+
+function stopAutoPlay() {
+  clearInterval(autoPlayInterval);
+}
+
+function resetAutoPlay() {
+  stopAutoPlay();
+  startAutoPlay();
+}
+
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+if (prevBtn && nextBtn) {
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetAutoPlay();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetAutoPlay();
+  });
+
+  const carouselWrapper = document.querySelector('.carousel-wrapper');
+  if (carouselWrapper) {
+    carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
+    carouselWrapper.addEventListener('mouseleave', startAutoPlay);
+  }
+
+  renderCarousel();
+  updateIndicators();
+  startAutoPlay();
+}
+
+// RENDEROVANJE DRUSTVENIH MREZA
+function renderSocials(containerId, socials){
+  const containerSocials = document.getElementById(containerId);
+  const div = document.createElement('div');
+  div.className = 'd-flex gap-3 mb-3 justify-content-center';
+  socials.forEach(social => {
+    const a = document.createElement('a');
+    a.href = '#';
+    const i = document.createElement('i');
+    i.className = social;
+    a.appendChild(i);
+    div.appendChild(a);
+  })
+  containerSocials.after(div);
+}
+renderSocials('social-text', socials)
 ////////////////////
 ////////////////////
