@@ -1,166 +1,166 @@
 const movies = [
-    {
-      name: "Avatar: Fire and Ash",
-      description: "The latest chapter in the Avatar saga, following the Sully family as they face renewed threats on Pandora in a visually spectacular sci-fi adventure.",
-      category: ["Sci-Fi", "Adventure", "Action"],
-      rating: 8.1,
-      image: "assets/img/movies/avatar_fire_and_ash.jpg"
-    },
-    {
-      name: "Zootopia 2",
-      description: "Judy Hopps and Nick Wilde return to crack a major criminal case in a lively, record-breaking animated sequel praised for its humor and heart.",
-      category: ["Animation", "Family", "Comedy"],
-      rating: 8.4,
-      image: "assets/img/movies/zootopia2.jpg"
-    },
-    {
-      name: "Superman",
-      description: "A new DC Universe takes flight as Clark Kent navigates life in Metropolis while battling a powerful foe in this modern superhero reboot.",
-      category: ["Superhero", "Action", "Sci-Fi"],
-      rating: 7.1,
-      image: "assets/img/movies/superman.jpg"
-    },
-    {
-      name: "Sinners",
-      description: "A genre-blending supernatural horror set in the Mississippi Delta, starring Michael B. Jordan in a dual role confronting dark forces and family legacies.",
-      category: ["Superhero", "Action", "Sci-Fi"],
-      rating: 7.5,
-      image: "assets/img/movies/sinners.jpg"
-    },
-    {
-      name: "Jurassic World: Rebirth",
-      description: "The dinosaurs are back in a thrilling new chapter of the Jurassic franchise, mixing action and awe in globe-trotting adventure.",
-      category: ["Action", "Adventure", "Sci-Fi"],
-      rating: 7.3,
-      image: "assets/img/movies/jurassic_world_rebirth.jpg"
-    },
-    {
-      name: "Mission: Impossible – The Final Reckoning",
-      description: "Ethan Hunt and his IMF team face their toughest mission yet in this action-packed finale of the long-running spy franchise.",
-      category: ["Action", "Thriller", "Spy"],
-      rating: 7.8,
-      image: "assets/img/movies/mission_impossible.jpg"
-    },
-    {
-      name: "The Rip",
-      description: "A high-stakes Netflix crime thriller following Miami cops navigating betrayal and buried cash in a tense cat-and-mouse story.",
-      category: ["Crime", "Thriller", "Drama"],
-      rating: 7.0,
-      image: "assets/img/movies/the_rip.jpg"
-    },
-    {
-      name: "Send Help",
-      description: "A survival thriller about two plane-crash survivors stranded on a remote island, forced to rely on each other to stay alive.",
-      category: ["Thriller", "Survival", "Drama"],
-      rating: 7.2,
-      image: "assets/img/movies/send_help.jpg"
-    },
-    {
-      name: "Avengers: Doomsday",
-      description: "The MCU’s epic return featuring Earth’s Mightiest Heroes facing an apocalyptic threat that could end reality as they know it.",
-      category: ["Superhero", "Action", "Sci-Fi"],
-      rating: 8.5,
-      image: "assets/img/movies/avengers_doomsday.jpg"
-    },
-    {
-      name: "Project Hail Mary",
-      description: "A hard-science sci-fi adaptation starring Ryan Gosling as a lone astronaut on a desperate mission to save Earth from extinction.",
-      category: ["Sci-Fi", "Drama", "Adventure"],
-      rating: 8.0,
-      image: "assets/img/movies/project_hail_mary.jpeg"
-    },
-    {
-      name: "Toy Story 5",
-      description: "Woody, Buzz and the gang embark on another emotional journey as the beloved Pixar franchise continues.",
-      category: ["Animation", "Family", "Adventure"],
-      rating: 8.0,
-      image: "assets/img/movies/toy_story_five.jpg"
-    },
-    {
-      name: "The Odyssey",
-      description: "A large-scale cinematic retelling of Homer’s epic, following Odysseus on his perilous journey home after the Trojan War.",
-      category: ["Epic", "Adventure", "Drama"],
-      rating: 7.7,
-      image: "assets/img/movies/the_odyssey.jpg"
-    }
-  ];
-  const carouselSlides = [
-    {
-      image: 'assets/img/carousel/scene1.jpg',
-      title: 'Avatar: Fire and Ash',
-      description: 'Epic sci-fi adventure continues on Pandora'
-    },
-    {
-      image: 'assets/img/carousel/scene2.jpg',
-      title: 'The Conjuring: Last Rites',
-      description: 'Paranormal investigators Ed and Lorraine Warren take on one last terrifying case'
-    },
-    {
-      image: 'assets/img/carousel/scene3.jpg',
-      title: 'Superman',
-      description: 'The Man of Steel rises again in this modern reboot'
-    },
-    {
-      image: 'assets/img/carousel/scene4.jpg',
-      title: 'F1: The Movie',
-      description: 'A Formula One driver comes out of retirement to mentor and team up with a younger driver.'
-    },
-    {
-      image: 'assets/img/carousel/scene5.jpg',
-      title: 'Dune: Part Two',
-      description: 'The epic saga continues across the desert planet'
-    },
-    {
-      image: 'assets/img/carousel/scene6.jpg',
-      title: 'Spider-Man: Beyond the Spider-Verse',
-      description: 'Miles Morales swings into a new adventure'
-    }
-  ];
-  const filterBtns = [
-    { text: "All", data: "all" },
-    { text: "Action", data: "action" },
-    { text: "Sci-fi", data: "sci-fi" },
-    { text: "Drama", data: "drama" },
-    { text: "Thriller", data: "thriller" },
-    { text: "Comedy", data: "comedy" },
+  {
+    name: "Avatar: Fire and Ash",
+    description: "The latest chapter in the Avatar saga, following the Sully family as they face renewed threats on Pandora in a visually spectacular sci-fi adventure.",
+    category: ["Sci-Fi", "Adventure", "Action"],
+    rating: 8.1,
+    image: "assets/img/movies/avatar_fire_and_ash.jpg"
+  },
+  {
+    name: "Zootopia 2",
+    description: "Judy Hopps and Nick Wilde return to crack a major criminal case in a lively, record-breaking animated sequel praised for its humor and heart.",
+    category: ["Animation", "Family", "Comedy"],
+    rating: 8.4,
+    image: "assets/img/movies/zootopia2.jpg"
+  },
+  {
+    name: "Superman",
+    description: "A new DC Universe takes flight as Clark Kent navigates life in Metropolis while battling a powerful foe in this modern superhero reboot.",
+    category: ["Superhero", "Action", "Sci-Fi"],
+    rating: 7.1,
+    image: "assets/img/movies/superman.jpg"
+  },
+  {
+    name: "Sinners",
+    description: "A genre-blending supernatural horror set in the Mississippi Delta, starring Michael B. Jordan in a dual role confronting dark forces and family legacies.",
+    category: ["Superhero", "Action", "Sci-Fi"],
+    rating: 7.5,
+    image: "assets/img/movies/sinners.jpg"
+  },
+  {
+    name: "Jurassic World: Rebirth",
+    description: "The dinosaurs are back in a thrilling new chapter of the Jurassic franchise, mixing action and awe in globe-trotting adventure.",
+    category: ["Action", "Adventure", "Sci-Fi"],
+    rating: 7.3,
+    image: "assets/img/movies/jurassic_world_rebirth.jpg"
+  },
+  {
+    name: "Mission: Impossible – The Final Reckoning",
+    description: "Ethan Hunt and his IMF team face their toughest mission yet in this action-packed finale of the long-running spy franchise.",
+    category: ["Action", "Thriller", "Spy"],
+    rating: 7.8,
+    image: "assets/img/movies/mission_impossible.jpg"
+  },
+  {
+    name: "The Rip",
+    description: "A high-stakes Netflix crime thriller following Miami cops navigating betrayal and buried cash in a tense cat-and-mouse story.",
+    category: ["Crime", "Thriller", "Drama"],
+    rating: 7.0,
+    image: "assets/img/movies/the_rip.jpg"
+  },
+  {
+    name: "Send Help",
+    description: "A survival thriller about two plane-crash survivors stranded on a remote island, forced to rely on each other to stay alive.",
+    category: ["Thriller", "Survival", "Drama"],
+    rating: 7.2,
+    image: "assets/img/movies/send_help.jpg"
+  },
+  {
+    name: "Avengers: Doomsday",
+    description: "The MCU’s epic return featuring Earth’s Mightiest Heroes facing an apocalyptic threat that could end reality as they know it.",
+    category: ["Superhero", "Action", "Sci-Fi"],
+    rating: 8.5,
+    image: "assets/img/movies/avengers_doomsday.jpg"
+  },
+  {
+    name: "Project Hail Mary",
+    description: "A hard-science sci-fi adaptation starring Ryan Gosling as a lone astronaut on a desperate mission to save Earth from extinction.",
+    category: ["Sci-Fi", "Drama", "Adventure"],
+    rating: 8.0,
+    image: "assets/img/movies/project_hail_mary.jpeg"
+  },
+  {
+    name: "Toy Story 5",
+    description: "Woody, Buzz and the gang embark on another emotional journey as the beloved Pixar franchise continues.",
+    category: ["Animation", "Family", "Adventure"],
+    rating: 8.0,
+    image: "assets/img/movies/toy_story_five.jpg"
+  },
+  {
+    name: "The Odyssey",
+    description: "A large-scale cinematic retelling of Homer’s epic, following Odysseus on his perilous journey home after the Trojan War.",
+    category: ["Epic", "Adventure", "Drama"],
+    rating: 7.7,
+    image: "assets/img/movies/the_odyssey.jpg"
+  }
+];
+const carouselSlides = [
+  {
+    image: 'assets/img/carousel/scene1.jpg',
+    title: 'Avatar: Fire and Ash',
+    description: 'Epic sci-fi adventure continues on Pandora'
+  },
+  {
+    image: 'assets/img/carousel/scene2.jpg',
+    title: 'The Conjuring: Last Rites',
+    description: 'Paranormal investigators Ed and Lorraine Warren take on one last terrifying case'
+  },
+  {
+    image: 'assets/img/carousel/scene3.jpg',
+    title: 'Superman',
+    description: 'The Man of Steel rises again in this modern reboot'
+  },
+  {
+    image: 'assets/img/carousel/scene4.jpg',
+    title: 'F1: The Movie',
+    description: 'A Formula One driver comes out of retirement to mentor and team up with a younger driver.'
+  },
+  {
+    image: 'assets/img/carousel/scene5.jpg',
+    title: 'Dune: Part Two',
+    description: 'The epic saga continues across the desert planet'
+  },
+  {
+    image: 'assets/img/carousel/scene6.jpg',
+    title: 'Spider-Man: Beyond the Spider-Verse',
+    description: 'Miles Morales swings into a new adventure'
+  }
+];
+const filterBtns = [
+  { text: "All", data: "all" },
+  { text: "Action", data: "action" },
+  { text: "Sci-fi", data: "sci-fi" },
+  { text: "Drama", data: "drama" },
+  { text: "Thriller", data: "thriller" },
+  { text: "Comedy", data: "comedy" },
 
-  ]
-  const navLinks = [
-    { text: "Home", href: "index.html"},
-    { text: "About Us", href:"index.html#about"},
-    { text: "Movies", href: "index.html#movies"},
-    { text: "Gallery", href: "index.html#gallery"},
-    { text: "Review", href: "index.html#review-anchor" },
-    { text: "Author", href: "/author.html" },
-    { icon: "bi bi-file-earmark-text", href: "#" },
-    { icon: "bi bi-download", href: "#" }
-  ];
-  const footerLinks = [
-    { text: "Home", href: "index.html"},
-    { text: "Movies", href: "index.html#movies"},
-    { text: "Review", href: "index.html#review-anchor" },
-    { text: "Author", href: "/author.html" }
-  ]
-  const ratingOptions = [
-    { value: "", text: "Select a rating" },
-    { value: "5", text: "5 - Excellent" },
-    { value: "4", text: "4 - Good" },
-    { value: "3", text: "3 - Average" },
-    { value: "2", text: "2 - Poor" },
-    { value: "1", text: "1 - Terrible" }
-  ];
-  const recommendOptions = [
-    { value: "yes", text: "Yes" },
-    { value: "no", text: "No" },
-    { value: "maybe", text: "Maybe" }
-  ];
-  const likedOptions = [
-    { value: "plot", text: "Plot" },
-    { value: "acting", text: "Acting" },
-    { value: "visuals", text: "Visuals" },
-    { value: "soundtrack", text: "Soundtrack" }
-  ];
-  const socials = ['bi bi-facebook', 'bi bi-twitter', 'bi bi-instagram', 'bi bi-youtube'];
+]
+const navLinks = [
+  { text: "Home", href: "index.html" },
+  { text: "About Us", href: "index.html#about" },
+  { text: "Movies", href: "index.html#movies" },
+  { text: "Gallery", href: "index.html#gallery" },
+  { text: "Review", href: "index.html#review-anchor" },
+  { text: "Author", href: "/author.html" },
+  { icon: "bi bi-file-earmark-text", href: "#" },
+  { icon: "bi bi-download", href: "#" }
+];
+const footerLinks = [
+  { text: "Home", href: "index.html" },
+  { text: "Movies", href: "index.html#movies" },
+  { text: "Review", href: "index.html#review-anchor" },
+  { text: "Author", href: "/author.html" }
+]
+const ratingOptions = [
+  { value: "", text: "Select a rating" },
+  { value: "5", text: "5 - Excellent" },
+  { value: "4", text: "4 - Good" },
+  { value: "3", text: "3 - Average" },
+  { value: "2", text: "2 - Poor" },
+  { value: "1", text: "1 - Terrible" }
+];
+const recommendOptions = [
+  { value: "yes", text: "Yes" },
+  { value: "no", text: "No" },
+  { value: "maybe", text: "Maybe" }
+];
+const likedOptions = [
+  { value: "plot", text: "Plot" },
+  { value: "acting", text: "Acting" },
+  { value: "visuals", text: "Visuals" },
+  { value: "soundtrack", text: "Soundtrack" }
+];
+const socials = ['bi bi-facebook', 'bi bi-twitter', 'bi bi-instagram', 'bi bi-youtube'];
 ////////////////////
 ////////////////////
 // RENDEROVANJE NAVIGACIONIH LINKOVA
@@ -173,9 +173,9 @@ navLinks.forEach(link => {
   a.className = 'nav-link';
   a.href = link.href;
 
-  if(link.icon){
+  if (link.icon) {
     a.innerHTML = `<i class='${link.icon} fs-4'></i>`
-  }else {
+  } else {
     a.textContent = link.text;
   }
 
@@ -230,28 +230,28 @@ document.querySelectorAll('.expand-btn').forEach(button => {
 });
 
 // RENDEROVANJE DUGMICA ZA FILTEROVANJE
-  const buttonWrapper = document.querySelector('.filter-buttons');
+const buttonWrapper = document.querySelector('.filter-buttons');
 
-  if(buttonWrapper){
-    filterBtns.forEach(btn => {
-      const button = document.createElement('button');
-      button.className = 'filter-btn rounded-pill'
-      button.textContent = btn.text;
-      button.dataset.category = btn.data;
-      if (button.dataset.category === 'all') {
-        button.classList.add('active');
-      }
+if (buttonWrapper) {
+  filterBtns.forEach(btn => {
+    const button = document.createElement('button');
+    button.className = 'filter-btn rounded-pill'
+    button.textContent = btn.text;
+    button.dataset.category = btn.data;
+    if (button.dataset.category === 'all') {
+      button.classList.add('active');
+    }
 
-      buttonWrapper.appendChild(button);
-    })
+    buttonWrapper.appendChild(button);
+  })
 }
 
 // RENDEROVANJE MOVIE KARTICA
 const container = document.getElementById('movie-card-wrapper');
-if(container){
-  function renderMovies(moviesToRender){
+if (container) {
+  function renderMovies(moviesToRender) {
     container.innerHTML = '';
-  
+
     moviesToRender.forEach(movie => {
       const movieCard = document.createElement('div');
       movieCard.className = 'col-lg-4 col-sm-6 movie-card';
@@ -293,79 +293,79 @@ filterButtons.forEach(button => {
 });
 
 //RENDEROVANJE DDL-a, CHECKBOX-a I RADIO BUTTON-a
-function renderSelect(errorSpanId, options, selectId,selectName) {
+function renderSelect(errorSpanId, options, selectId, selectName) {
   const errorSpan = document.getElementById(errorSpanId);
   const formGroup = errorSpan.parentElement;
-  
+
   const select = document.createElement('select');
   select.id = selectId;
   select.name = selectName;
-  
+
   options.forEach(option => {
     const opt = document.createElement('option');
     opt.value = option.value;
     opt.textContent = option.text;
     select.appendChild(opt);
   });
-  
+
   formGroup.insertBefore(select, errorSpan);
 }
 
 function renderRadioButtons(errorSpanId, options, groupName) {
   const errorSpan = document.getElementById(errorSpanId);
   const formGroup = errorSpan.parentElement;
-  
+
   const container = document.createElement('div');
   container.className = 'radio-group';
-  
+
   options.forEach(option => {
     const label = document.createElement('label');
-    
+
     const input = document.createElement('input');
     input.type = 'radio';
     input.name = groupName;
     input.value = option.value;
-    
+
     label.appendChild(input);
     label.appendChild(document.createTextNode(' ' + option.text));
-    
+
     container.appendChild(label);
   });
-  
+
   formGroup.insertBefore(container, errorSpan);
 }
 
 function renderCheckboxes(errorSpanId, options, groupName) {
   const errorSpan = document.getElementById(errorSpanId);
   const formGroup = errorSpan.parentElement;
-  
+
   const container = document.createElement('div');
   container.className = 'checkbox-group';
   container.style.flexDirection = 'row';
   container.style.flexWrap = 'wrap';
   container.style.gap = '20px';
-  
+
   options.forEach(option => {
     const label = document.createElement('label');
-    
+
     const input = document.createElement('input');
     input.type = 'checkbox';
     input.name = groupName;
     input.value = option.value;
-    
+
     label.appendChild(input);
     label.appendChild(document.createTextNode(' ' + option.text));
-    
+
     container.appendChild(label);
   });
-  
+
   formGroup.insertBefore(container, errorSpan);
 }
 
 
 //VALIDACIJA FORME
 const form = document.getElementById('reviewForm');
-if(form){
+if (form) {
   renderSelect('ratingError', ratingOptions, 'movieRating', 'movieRating');
   renderRadioButtons('recommendError', recommendOptions, 'recommend');
   renderCheckboxes('likedError', likedOptions, 'liked');
@@ -374,17 +374,17 @@ if(form){
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const reviewRegex = /^.{10,200}$/;
 
-  function validateName(){
+  function validateName() {
     const name = document.getElementById('name');
     const error = document.getElementById('nameError');
     const value = name.value.trim();
-  
-    if(value === ''){
+
+    if (value === '') {
       error.textContent = 'Name is required';
       name.classList.add('invalid');
       return false;
     }
-  
+
     if (!fullNameRegex.test(value)) {
       error.textContent = 'Example: Joe Smith';
       name.classList.add('invalid');
@@ -394,18 +394,18 @@ if(form){
     name.classList.remove('invalid');
     return true;
   }
-  
+
   function validateEmail() {
     const email = document.getElementById('email');
     const error = document.getElementById('emailError');
     const value = email.value.trim();
-    
-    if(value === ''){
+
+    if (value === '') {
       error.textContent = 'Email is required';
       email.classList.add('invalid');
       return false;
     }
-  
+
     if (!emailRegex.test(value)) {
       error.textContent = 'Example: email@example.com';
       email.classList.add('invalid');
@@ -415,11 +415,11 @@ if(form){
     email.classList.remove('invalid');
     return true;
   }
-  
+
   function validateRating() {
     const rating = document.getElementById('movieRating');
     const error = document.getElementById('ratingError');
-    
+
     if (rating.value === '') {
       error.textContent = 'Please select a rating';
       rating.classList.add('invalid');
@@ -429,56 +429,56 @@ if(form){
     rating.classList.remove('invalid');
     return true;
   }
-  
+
   function validateRecommend() {
     const recommend = document.querySelector('input[name="recommend"]:checked');
     const error = document.getElementById('recommendError');
-    
+
     if (!recommend) {
       error.textContent = 'Please select an option';
       return false;
     }
-    
+
     error.textContent = '';
     return true;
   }
-  
+
   function validateLiked() {
     const checkedBoxes = document.querySelectorAll('input[name="liked"]:checked');
     const error = document.getElementById('likedError');
-  
+
     if (checkedBoxes.length === 0) {
       console.log('Setting error message for liked');
       error.textContent = 'Please select at least one option';
       return false;
     }
-    
+
     error.textContent = '';
     return true;
   }
-  
+
   function validateReview() {
     const review = document.getElementById('review');
     const error = document.getElementById('reviewError');
     const value = review.value.trim();
 
-    if(value === ''){
+    if (value === '') {
       error.textContent = 'Review is required';
       review.classList.add('invalid');
       return false;
     }
-  
+
     if (!reviewRegex.test(value)) {
       error.textContent = 'Review must be between 10-200 characters';
       review.classList.add('invalid');
       return false;
     }
-    
+
     error.textContent = '';
     review.classList.remove('invalid');
     return true;
   }
-  
+
   document.getElementById('name').addEventListener('blur', validateName);
   document.getElementById('email').addEventListener('blur', validateEmail);
   document.getElementById('movieRating').addEventListener('change', validateRating);
@@ -491,37 +491,37 @@ if(form){
   likedCheckboxes.forEach(checkbox => {
     checkbox.addEventListener('change', validateLiked);
   });
-  
-  document.getElementById('name').addEventListener('input', function() {
+
+  document.getElementById('name').addEventListener('input', function () {
     if (this.value.trim() !== '') validateName();
   });
-  document.getElementById('email').addEventListener('input', function() {
+  document.getElementById('email').addEventListener('input', function () {
     if (this.value.trim() !== '') validateEmail();
   });
-  document.getElementById('review').addEventListener('input', function() {
+  document.getElementById('review').addEventListener('input', function () {
     if (this.value.trim() !== '') validateReview();
   });
-  
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-  
+
     let isValid = true;
-  
+
     const successMessage = document.getElementById('successMessage');
     successMessage.textContent = '';
-  
+
     if (!validateName()) isValid = false;
     if (!validateEmail()) isValid = false;
     if (!validateRating()) isValid = false;
     if (!validateRecommend()) isValid = false;
     if (!validateLiked()) isValid = false;
     if (!validateReview()) isValid = false;
-    
+
     if (isValid) {
       successMessage.textContent = '✓ Thank you for your review! Your submission was successful.';
-  
+
       form.reset();
-  
+
       document.querySelectorAll('.error-message').forEach(error => error.textContent = '');
       document.querySelectorAll('.invalid').forEach(field => field.classList.remove('invalid'));
     } else {
@@ -547,9 +547,9 @@ window.addEventListener('resize', () => {
 function renderCarousel() {
   const track = document.getElementById('carouselTrack');
   const indicatorsContainer = document.getElementById('carouselIndicators');
-  
+
   if (!track) return;
-  
+
   track.innerHTML = '';
   carouselSlides.forEach((slide) => {
     const slideDiv = document.createElement('div');
@@ -563,7 +563,7 @@ function renderCarousel() {
     `;
     track.appendChild(slideDiv);
   });
-  
+
   updateIndicators();
 }
 
@@ -660,7 +660,7 @@ if (prevBtn && nextBtn) {
 }
 
 // RENDEROVANJE DRUSTVENIH MREZA
-function renderSocials(containerId, socials){
+function renderSocials(containerId, socials) {
   const containerSocials = document.getElementById(containerId);
   const div = document.createElement('div');
   div.className = 'd-flex gap-3 mb-3 justify-content-center';
