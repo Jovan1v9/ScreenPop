@@ -84,14 +84,30 @@ const movies = [
       image: "assets/images/movies/the_odyssey.jpg"
     }
   ];
+  const filterBtns = [
+    { text: "All", data: "all" },
+    { text: "Action", data: "action" },
+    { text: "Sci-fi", data: "sci-fi" },
+    { text: "Drama", data: "drama" },
+    { text: "Thriller", data: "thriller" },
+    { text: "Comedy", data: "comedy" },
+
+  ]
   const navLinks = [
-    { text: "Home", href: "index.html", active: true },
-    { text: "Movies", href: "#movies"},
-    { text: "Review", href: "#review" },
+    { text: "Home", href: "index.html"},
+    { text: "About Us", href:"index.html#about"},
+    { text: "Movies", href: "index.html#movies"},
+    { text: "Review", href: "index.html#review-anchor" },
     { text: "Author", href: "/author.html" },
     { icon: "bi bi-file-earmark-text", href: "#" },
     { icon: "bi bi-download", href: "#" }
   ];
+  const footerLinks = [
+    { text: "Home", href: "index.html"},
+    { text: "Movies", href: "index.html#movies"},
+    { text: "Review", href: "index.html#review-anchor" },
+    { text: "Author", href: "/author.html" }
+  ]
 ////////////////////
 ////////////////////
 // RENDEROVANJE NAVIGACIONIH LINKOVA
@@ -121,37 +137,93 @@ navLinks.forEach(link => {
   navList.appendChild(li);
 })
 
+const footerNav = document.querySelector('.quick-links');
+footerLinks.forEach(link => {
+  const li = document.createElement('li');
+  li.className = 'nav-item';
+
+  const a = document.createElement('a');
+  a.className = 'nav-link';
+  a.href = link.href;
+  a.textContent = link.text;
+
+  li.appendChild(a);
+  footerNav.appendChild(li);
+})
+
+// EKSPANDIRAJUCI TEKST
+document.querySelectorAll('.expand-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const content = document.getElementById(button.dataset.target);
+    const text = button.querySelector('.expand-text');
+
+    const isOpen = content.classList.contains('expanded');
+
+    document.querySelectorAll('.about-content').forEach(c => {
+      c.classList.remove('expanded');
+    });
+
+    document.querySelectorAll('.expand-btn').forEach(b => {
+      b.classList.remove('is-expanded');
+      b.querySelector('.expand-text').textContent = 'Read More';
+    });
+
+    if (!isOpen) {
+      content.classList.add('expanded');
+      button.classList.add('is-expanded');
+      text.textContent = 'Read Less';
+    }
+  });
+});
+
+// RENDEROVANJE DUGMICA ZA FILTEROVANJE
+  const buttonWrapper = document.querySelector('.filter-buttons');
+
+  if(buttonWrapper){
+    filterBtns.forEach(btn => {
+      const button = document.createElement('button');
+      button.className = 'filter-btn rounded-pill'
+      button.textContent = btn.text;
+      button.dataset.category = btn.data;
+      if (button.dataset.category === 'all') {
+        button.classList.add('active');
+      }
+
+      buttonWrapper.appendChild(button);
+    })
+}
 
 // RENDEROVANJE MOVIE KARTICA
 const container = document.getElementById('movie-card-wrapper');
-const filterButtons = document.querySelectorAll('.filter-btn');
-
-function renderMovies(moviesToRender){
-  container.innerHTML = '';
-
-  moviesToRender.forEach(movie => {
-    const movieCard = document.createElement('div');
-    movieCard.className = 'col-lg-4 col-sm-6 movie-card';
-    movieCard.style.backgroundImage = `linear-gradient(180deg,rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.8) 55%, rgba(0, 0, 0, 1) 90%), url('${movie.image}')`;
-    movieCard.innerHTML = `
-    <div class="card-content">
-        <h1 class="movie-title">${movie.name}</h1>
-        <p class="movie-description">${movie.description}</p>
-      </div>
-      <div class="card-footer">
-        <button class="trailer-btn">Watch trailer</button>
-        <div class="rating-container">
-          <span class="rating-value"><i class="bi bi-star-fill"></i>${movie.rating}</span>
+if(container){
+  function renderMovies(moviesToRender){
+    container.innerHTML = '';
+  
+    moviesToRender.forEach(movie => {
+      const movieCard = document.createElement('div');
+      movieCard.className = 'col-lg-4 col-sm-6 movie-card';
+      movieCard.style.backgroundImage = `linear-gradient(180deg,rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.8) 55%, rgba(0, 0, 0, 1) 90%), url('${movie.image}')`;
+      movieCard.innerHTML = `
+      <div class="card-content">
+          <h1 class="movie-title">${movie.name}</h1>
+          <p class="movie-description">${movie.description}</p>
+        </div>
+        <div class="card-footer">
+          <button class="trailer-btn">Watch trailer</button>
+          <div class="rating-container">
+            <span class="rating-value"><i class="bi bi-star-fill"></i>${movie.rating}</span>
+          </div>
         </div>
       </div>
-    </div>
-    `;
-    container.appendChild(movieCard);
-  })
+      `;
+      container.appendChild(movieCard);
+    })
+  }
+  renderMovies(movies);
 }
-renderMovies(movies);
-
 //FILTRIRANJE PO KATEGORIJAMA 
+const filterButtons = document.querySelectorAll('.filter-btn');
+
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
     filterButtons.forEach(button => button.classList.remove('active'));
@@ -169,163 +241,165 @@ filterButtons.forEach(button => {
 
 //VALIDACIJA FORME
 const form = document.getElementById('reviewForm');
-const fullNameRegex = /^[A-ZČĆĐŠŽ][a-zčćđšž]{2,10}\s[A-ZČĆĐŠŽ][a-zčćđšž]{3,12}$/;
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const reviewRegex = /^.{10,200}$/
+if(form){
+  const fullNameRegex = /^[A-ZČĆĐŠŽ][a-zčćđšž]{2,10}\s[A-ZČĆĐŠŽ][a-zčćđšž]{3,12}$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const reviewRegex = /^.{10,200}$/;
 
-function validateName(){
-  const name = document.getElementById('name');
-  const error = document.getElementById('nameError');
-  const value = name.value.trim();
-
-  if(value === ''){
-    error.textContent = 'Name is required';
-    name.classList.add('invalid');
-    return false;
+  function validateName(){
+    const name = document.getElementById('name');
+    const error = document.getElementById('nameError');
+    const value = name.value.trim();
+  
+    if(value === ''){
+      error.textContent = 'Name is required';
+      name.classList.add('invalid');
+      return false;
+    }
+  
+    if (!fullNameRegex.test(value)) {
+      error.textContent = 'Example: Joe Smith';
+      name.classList.add('invalid');
+      return false;
+    }
+    error.textContent = '';
+    name.classList.remove('invalid');
+    return true;
   }
-
-  if (!fullNameRegex.test(value)) {
-    error.textContent = 'Example: Joe Smith';
-    name.classList.add('invalid');
-    return false;
+  
+  function validateEmail() {
+    const email = document.getElementById('email');
+    const error = document.getElementById('emailError');
+    const value = email.value.trim();
+    
+    if(value === ''){
+      error.textContent = 'Email is required';
+      email.classList.add('invalid');
+      return false;
+    }
+  
+    if (!emailRegex.test(value)) {
+      error.textContent = 'Example: email@example.com';
+      email.classList.add('invalid');
+      return false;
+    }
+    error.textContent = '';
+    email.classList.remove('invalid');
+    return true;
   }
-  error.textContent = '';
-  name.classList.remove('invalid');
-  return true;
+  
+  function validateRating() {
+    const rating = document.getElementById('movieRating');
+    const error = document.getElementById('ratingError');
+    
+    if (rating.value === '') {
+      error.textContent = 'Please select a rating';
+      rating.classList.add('invalid');
+      return false;
+    }
+    error.textContent = '';
+    rating.classList.remove('invalid');
+    return true;
+  }
+  
+  function validateRecommend() {
+    const recommend = document.querySelector('input[name="recommend"]:checked');
+    const error = document.getElementById('recommendError');
+    
+    if (!recommend) {
+      error.textContent = 'Please select an option';
+      return false;
+    }
+    
+    error.textContent = '';
+    return true;
+  }
+  
+  function validateLiked() {
+    const checkedBoxes = document.querySelectorAll('input[name="liked"]:checked');
+    const error = document.getElementById('likedError');
+  
+    if (checkedBoxes.length === 0) {
+      console.log('Setting error message for liked');
+      error.textContent = 'Please select at least one option';
+      return false;
+    }
+    
+    error.textContent = '';
+    return true;
+  }
+  
+  function validateReview() {
+    const review = document.getElementById('review');
+    const error = document.getElementById('reviewError');
+    const value = review.value.trim();
+
+    if(value === ''){
+      error.textContent = 'Review is required';
+      review.classList.add('invalid');
+      return false;
+    }
+  
+    if (!reviewRegex.test(value)) {
+      error.textContent = 'Review must be between 10-200 characters';
+      review.classList.add('invalid');
+      return false;
+    }
+    
+    error.textContent = '';
+    review.classList.remove('invalid');
+    return true;
+  }
+  
+  document.getElementById('name').addEventListener('blur', validateName);
+  document.getElementById('email').addEventListener('blur', validateEmail);
+  document.getElementById('movieRating').addEventListener('change', validateRating);
+  document.getElementById('review').addEventListener('blur', validateReview);
+  const recommendRadios = document.querySelectorAll('input[name="recommend"]');
+  recommendRadios.forEach(radio => {
+    radio.addEventListener('change', validateRecommend);
+  });
+  const likedCheckboxes = document.querySelectorAll('input[name="liked"]');
+  likedCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', validateLiked);
+  });
+  
+  document.getElementById('name').addEventListener('input', function() {
+    if (this.value.trim() !== '') validateName();
+  });
+  document.getElementById('email').addEventListener('input', function() {
+    if (this.value.trim() !== '') validateEmail();
+  });
+  document.getElementById('review').addEventListener('input', function() {
+    if (this.value.trim() !== '') validateReview();
+  });
+  
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+  
+    let isValid = true;
+  
+    const successMessage = document.getElementById('successMessage');
+    successMessage.textContent = '';
+  
+    if (!validateName()) isValid = false;
+    if (!validateEmail()) isValid = false;
+    if (!validateRating()) isValid = false;
+    if (!validateRecommend()) isValid = false;
+    if (!validateLiked()) isValid = false;
+    if (!validateReview()) isValid = false;
+    
+    if (isValid) {
+      successMessage.textContent = '✓ Thank you for your review! Your submission was successful.';
+  
+      form.reset();
+  
+      document.querySelectorAll('.error-message').forEach(error => error.textContent = '');
+      document.querySelectorAll('.invalid').forEach(field => field.classList.remove('invalid'));
+    } else {
+      console.log('Doslo je do greske');
+    }
+  });
 }
-
-function validateEmail() {
-  const email = document.getElementById('email');
-  const error = document.getElementById('emailError');
-  const value = email.value.trim();
-  
-  if(value === ''){
-    error.textContent = 'Email is required';
-    email.classList.add('invalid');
-    return false;
-  }
-
-  if (!emailRegex.test(value)) {
-    error.textContent = 'Example: email@example.com';
-    email.classList.add('invalid');
-    return false;
-  }
-  error.textContent = '';
-  email.classList.remove('invalid');
-  return true;
-}
-
-function validateRating() {
-  const rating = document.getElementById('movieRating');
-  const error = document.getElementById('ratingError');
-  
-  if (rating.value === '') {
-    error.textContent = 'Please select a rating';
-    rating.classList.add('invalid');
-    return false;
-  }
-  error.textContent = '';
-  rating.classList.remove('invalid');
-  return true;
-}
-
-function validateRecommend() {
-  const recommend = document.querySelector('input[name="recommend"]:checked');
-  const error = document.getElementById('recommendError');
-  
-  if (!recommend) {
-    error.textContent = 'Please select an option';
-    return false;
-  }
-  
-  error.textContent = '';
-  return true;
-}
-
-function validateLiked() {
-  const checkedBoxes = document.querySelectorAll('input[name="liked"]:checked');
-  const error = document.getElementById('likedError');
-
-  if (checkedBoxes.length === 0) {
-    console.log('Setting error message for liked');
-    error.textContent = 'Please select at least one option';
-    return false;
-  }
-  
-  error.textContent = '';
-  return true;
-}
-
-function validateReview() {
-  const review = document.getElementById('review');
-  const error = document.getElementById('reviewError');
-  const value = review.value.trim();
-
-  if(review === ''){
-    error.textContent = 'Review is required';
-    review.classList.add('invalid');
-    return false;
-  }
-
-  if (!reviewRegex.test(review.value.trim())) {
-    error.textContent = 'Review must be between 10-200 characters';
-    review.classList.add('invalid');
-    return false;
-  }
-  
-  error.textContent = '';
-  review.classList.remove('invalid');
-  return true;
-}
-
-document.getElementById('name').addEventListener('blur', validateName);
-document.getElementById('email').addEventListener('blur', validateEmail);
-document.getElementById('movieRating').addEventListener('change', validateRating);
-document.getElementById('review').addEventListener('blur', validateReview);
-const recommendRadios = document.querySelectorAll('input[name="recommend"]');
-recommendRadios.forEach(radio => {
-  radio.addEventListener('change', validateRecommend);
-});
-const likedCheckboxes = document.querySelectorAll('input[name="liked"]');
-likedCheckboxes.forEach(checkbox => {
-  checkbox.addEventListener('change', validateLiked);
-});
-
-document.getElementById('name').addEventListener('input', function() {
-  if (this.value.trim() !== '') validateName();
-});
-document.getElementById('email').addEventListener('input', function() {
-  if (this.value.trim() !== '') validateEmail();
-});
-document.getElementById('review').addEventListener('input', function() {
-  if (this.value.trim() !== '') validateReview();
-});
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  let isValid = true;
-
-  const successMessage = document.getElementById('successMessage');
-  successMessage.textContent = '';
-
-  if (!validateName()) isValid = false;
-  if (!validateEmail()) isValid = false;
-  if (!validateRating()) isValid = false;
-  if (!validateRecommend()) isValid = false;
-  if (!validateLiked()) isValid = false;
-  if (!validateReview()) isValid = false;
-  
-  if (isValid) {
-    successMessage.textContent = '✓ Thank you for your review! Your submission was successful.';
-
-    form.reset();
-
-    document.querySelectorAll('.error-message').forEach(error => error.textContent = '');
-    document.querySelectorAll('.invalid').forEach(field => field.classList.remove('invalid'));
-  } else {
-    console.log('Doslo je do greske');
-  }
-});
 ////////////////////
 ////////////////////
