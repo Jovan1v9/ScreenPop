@@ -4,84 +4,96 @@ const movies = [
     description: "The latest chapter in the Avatar saga, following the Sully family as they face renewed threats on Pandora in a visually spectacular sci-fi adventure.",
     category: ["Sci-Fi", "Adventure", "Action"],
     rating: 8.1,
-    image: "assets/img/movies/avatar_fire_and_ash.jpg"
+    image: "assets/img/movies/avatar_fire_and_ash.jpg",
+    trailerUrl: "https://www.youtube.com/embed/nb_fFj_0rq8"
   },
   {
     name: "Zootopia 2",
     description: "Judy Hopps and Nick Wilde return to crack a major criminal case in a lively, record-breaking animated sequel praised for its humor and heart.",
     category: ["Animation", "Family", "Comedy"],
     rating: 8.4,
-    image: "assets/img/movies/zootopia2.jpg"
+    image: "assets/img/movies/zootopia2.jpg",
+    trailerUrl: "https://www.youtube.com/embed/BjkIOU5PhyQ?si=9o9s3dBROMnbdcaF"
   },
   {
     name: "Superman",
     description: "A new DC Universe takes flight as Clark Kent navigates life in Metropolis while battling a powerful foe in this modern superhero reboot.",
     category: ["Superhero", "Action", "Sci-Fi"],
     rating: 7.1,
-    image: "assets/img/movies/superman.jpg"
+    image: "assets/img/movies/superman.jpg",
+    trailerUrl: "https://www.youtube.com/embed/Ox8ZLF6cGM0?si=VsTzWYIXstG7iXa4"
   },
   {
     name: "Sinners",
     description: "A genre-blending supernatural horror set in the Mississippi Delta, starring Michael B. Jordan in a dual role confronting dark forces and family legacies.",
     category: ["Superhero", "Action", "Sci-Fi"],
     rating: 7.5,
-    image: "assets/img/movies/sinners.jpg"
+    image: "assets/img/movies/sinners.jpg",
+    trailerUrl: "https://www.youtube.com/embed/bKGxHflevuk?si=GbIuqA0eN-aZOSA6"
   },
   {
     name: "Jurassic World: Rebirth",
     description: "The dinosaurs are back in a thrilling new chapter of the Jurassic franchise, mixing action and awe in globe-trotting adventure.",
     category: ["Action", "Adventure", "Sci-Fi"],
     rating: 7.3,
-    image: "assets/img/movies/jurassic_world_rebirth.jpg"
+    image: "assets/img/movies/jurassic_world_rebirth.jpg",
+    trailerUrl: "https://www.youtube.com/embed/jan5CFWs9ic?si=1Ts4105YhkTxGAWn"
   },
   {
     name: "Mission: Impossible – The Final Reckoning",
     description: "Ethan Hunt and his IMF team face their toughest mission yet in this action-packed finale of the long-running spy franchise.",
     category: ["Action", "Thriller", "Spy"],
     rating: 7.8,
-    image: "assets/img/movies/mission_impossible.jpg"
+    image: "assets/img/movies/mission_impossible.jpg",
+    trailerUrl: "https://www.youtube.com/embed/fsQgc9pCyDU?si=ujcsaYPMvKR-WyTl"
   },
   {
     name: "The Rip",
     description: "A high-stakes Netflix crime thriller following Miami cops navigating betrayal and buried cash in a tense cat-and-mouse story.",
     category: ["Crime", "Thriller", "Drama"],
     rating: 7.0,
-    image: "assets/img/movies/the_rip.jpg"
+    image: "assets/img/movies/the_rip.jpg",
+    trailerUrl: "https://www.youtube.com/embed/yeR5bcbRPak?si=TC0is2FUuYTZmLr5"
   },
   {
     name: "Send Help",
     description: "A survival thriller about two plane-crash survivors stranded on a remote island, forced to rely on each other to stay alive.",
     category: ["Thriller", "Survival", "Drama"],
     rating: 7.2,
-    image: "assets/img/movies/send_help.jpg"
+    image: "assets/img/movies/send_help.jpg",
+    trailerUrl: "https://www.youtube.com/embed/R4wiXj9NmEE?si=y8oYTzyNx4Wvencd"
   },
   {
     name: "Avengers: Doomsday",
     description: "The MCU’s epic return featuring Earth’s Mightiest Heroes facing an apocalyptic threat that could end reality as they know it.",
     category: ["Superhero", "Action", "Sci-Fi"],
     rating: 8.5,
-    image: "assets/img/movies/avengers_doomsday.jpg"
+    image: "assets/img/movies/avengers_doomsday.jpg",
+    trailerUrl: "https://www.youtube.com/embed/kH1XlwHQv9o?si=jhlAF-wW-iuuh5Fn"
   },
   {
     name: "Project Hail Mary",
     description: "A hard-science sci-fi adaptation starring Ryan Gosling as a lone astronaut on a desperate mission to save Earth from extinction.",
     category: ["Sci-Fi", "Drama", "Adventure"],
     rating: 8.0,
-    image: "assets/img/movies/project_hail_mary.jpeg"
+    image: "assets/img/movies/project_hail_mary.jpeg",
+    trailerUrl: "https://www.youtube.com/embed/m08TxIsFTRI?si=9wC_YUm0Co69-5q8"
   },
   {
     name: "Toy Story 5",
     description: "Woody, Buzz and the gang embark on another emotional journey as the beloved Pixar franchise continues.",
     category: ["Animation", "Family", "Adventure"],
     rating: 8.0,
-    image: "assets/img/movies/toy_story_five.jpg"
+    image: "assets/img/movies/toy_story_five.jpg",
+    trailerUrl: "https://www.youtube.com/embed/GGBgf8dcgyY?si=XhGfvioRB_rmGMhF"
   },
   {
     name: "The Odyssey",
     description: "A large-scale cinematic retelling of Homer’s epic, following Odysseus on his perilous journey home after the Trojan War.",
     category: ["Epic", "Adventure", "Drama"],
     rating: 7.7,
-    image: "assets/img/movies/the_odyssey.jpg"
+    image: "assets/img/movies/the_odyssey.jpg",
+    trailerUrl: "https://www.youtube.com/embed/Mzw2ttJD2qQ?si=tuE8Ah1BvgCagrqG"
   }
 ];
 const carouselSlides = [
@@ -264,7 +276,7 @@ if (container) {
           <p class="movie-description">${movie.description}</p>
         </div>
         <div class="card-footer">
-          <button class="trailer-btn">Watch trailer</button>
+          <button class="trailer-btn" data-trailer="${movie.trailerUrl}">Watch trailer</button>
           <div class="rating-container">
             <span class="rating-value"><i class="bi bi-star-fill"></i>${movie.rating}</span>
           </div>
@@ -276,6 +288,40 @@ if (container) {
   }
   renderMovies(movies);
 }
+
+//OTVARANJE I ZATVARANJE POPUP-a KAD SE KLIKNE WATCH TRAILER
+const modal = document.getElementById('trailer-modal');
+
+if(modal){
+  const iframe = document.getElementById('trailer-iframe');
+  const closeBtn = modal.querySelector('.trailer-close');
+  const backdrop = modal.querySelector('.trailer-backdrop');
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.trailer-btn');
+    if (!btn) return;
+  
+    const trailerUrl = btn.dataset.trailer;
+    iframe.src = trailerUrl + '?autoplay=1&mute=1&rel=0';
+    modal.classList.remove('hidden');
+  });
+  
+  function closeModal() {
+    modal.classList.add('hidden');
+    iframe.src = '';
+  }
+  
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+}
+
+
 //FILTRIRANJE PO KATEGORIJAMA 
 const filterButtons = document.querySelectorAll('.filter-btn');
 
@@ -531,135 +577,139 @@ if (form) {
     }
   });
 }
+
 // CAROUSEL
 let currentSlide = 0;
 let autoPlayInterval;
 let slidesPerView = window.innerWidth > 768 ? 2 : 1;
-
-window.addEventListener('resize', () => {
-  const newSlidesPerView = window.innerWidth > 768 ? 2 : 1;
-  if (newSlidesPerView !== slidesPerView) {
-    slidesPerView = newSlidesPerView;
-    currentSlide = 0;
+const carouselContainer = document.querySelector('.carousel-section');
+if(carouselContainer){
+  window.addEventListener('resize', () => {
+    const newSlidesPerView = window.innerWidth > 768 ? 2 : 1;
+    if (newSlidesPerView !== slidesPerView) {
+      slidesPerView = newSlidesPerView;
+      currentSlide = 0;
+      updateIndicators();
+      updateCarousel();
+    }
+  });
+  
+  function renderCarousel() {
+    const track = document.getElementById('carouselTrack');
+    const indicatorsContainer = document.getElementById('carouselIndicators');
+  
+    if (!track) return;
+  
+    track.innerHTML = '';
+    carouselSlides.forEach((slide) => {
+      const slideDiv = document.createElement('div');
+      slideDiv.className = 'carousel-slide';
+      slideDiv.innerHTML = `
+        <img src="${slide.image}" alt="${slide.title}">
+        <div class="carousel-caption">
+          <h5>${slide.title}</h5>
+          <p>${slide.description}</p>
+        </div>
+      `;
+      track.appendChild(slideDiv);
+    });
+  
     updateIndicators();
+  }
+  
+  function updateIndicators() {
+    const indicatorsContainer = document.getElementById('carouselIndicators');
+    if (!indicatorsContainer) return;
+  
+    indicatorsContainer.innerHTML = '';
+    const totalPages = Math.ceil(carouselSlides.length / slidesPerView);
+  
+    for (let i = 0; i < totalPages; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot';
+  
+      if (i === currentSlide) {
+        dot.classList.add('active');
+      }
+  
+      dot.addEventListener('click', () => {
+        goToSlide(i);
+      });
+  
+      indicatorsContainer.appendChild(dot);
+    }
+  }
+  
+  function updateCarousel() {
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.carousel-dot');
+  
+    const movePercentage = currentSlide * 100;
+    track.style.transform = `translateX(-${movePercentage}%)`;
+  
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+  }
+  
+  function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+    resetAutoPlay();
+  }
+  
+  function nextSlide() {
+    const totalPages = Math.ceil(carouselSlides.length / slidesPerView);
+    currentSlide = (currentSlide + 1) % totalPages;
     updateCarousel();
   }
-});
-
-function renderCarousel() {
-  const track = document.getElementById('carouselTrack');
-  const indicatorsContainer = document.getElementById('carouselIndicators');
-
-  if (!track) return;
-
-  track.innerHTML = '';
-  carouselSlides.forEach((slide) => {
-    const slideDiv = document.createElement('div');
-    slideDiv.className = 'carousel-slide';
-    slideDiv.innerHTML = `
-      <img src="${slide.image}" alt="${slide.title}">
-      <div class="carousel-caption">
-        <h5>${slide.title}</h5>
-        <p>${slide.description}</p>
-      </div>
-    `;
-    track.appendChild(slideDiv);
-  });
-
-  updateIndicators();
-}
-
-function updateIndicators() {
-  const indicatorsContainer = document.getElementById('carouselIndicators');
-  if (!indicatorsContainer) return;
-
-  indicatorsContainer.innerHTML = '';
-  const totalPages = Math.ceil(carouselSlides.length / slidesPerView);
-
-  for (let i = 0; i < totalPages; i++) {
-    const dot = document.createElement('button');
-    dot.className = 'carousel-dot';
-
-    if (i === currentSlide) {
-      dot.classList.add('active');
-    }
-
-    dot.addEventListener('click', () => {
-      goToSlide(i);
+  
+  function prevSlide() {
+    const totalPages = Math.ceil(carouselSlides.length / slidesPerView);
+    currentSlide = (currentSlide - 1 + totalPages) % totalPages;
+    updateCarousel();
+  }
+  
+  function startAutoPlay() {
+    stopAutoPlay();
+    autoPlayInterval = setInterval(nextSlide, 6000);
+  }
+  
+  function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+  }
+  
+  function resetAutoPlay() {
+    stopAutoPlay();
+    startAutoPlay();
+  }
+  
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoPlay();
     });
-
-    indicatorsContainer.appendChild(dot);
+  
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoPlay();
+    });
+  
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
+    if (carouselWrapper) {
+      carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
+      carouselWrapper.addEventListener('mouseleave', startAutoPlay);
+    }
+  
+    renderCarousel();
+    updateIndicators();
+    startAutoPlay();
   }
 }
 
-function updateCarousel() {
-  const track = document.getElementById('carouselTrack');
-  const dots = document.querySelectorAll('.carousel-dot');
-
-  const movePercentage = currentSlide * 100;
-  track.style.transform = `translateX(-${movePercentage}%)`;
-
-  dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentSlide);
-  });
-}
-
-function goToSlide(index) {
-  currentSlide = index;
-  updateCarousel();
-  resetAutoPlay();
-}
-
-function nextSlide() {
-  const totalPages = Math.ceil(carouselSlides.length / slidesPerView);
-  currentSlide = (currentSlide + 1) % totalPages;
-  updateCarousel();
-}
-
-function prevSlide() {
-  const totalPages = Math.ceil(carouselSlides.length / slidesPerView);
-  currentSlide = (currentSlide - 1 + totalPages) % totalPages;
-  updateCarousel();
-}
-
-function startAutoPlay() {
-  stopAutoPlay();
-  autoPlayInterval = setInterval(nextSlide, 6000);
-}
-
-function stopAutoPlay() {
-  clearInterval(autoPlayInterval);
-}
-
-function resetAutoPlay() {
-  stopAutoPlay();
-  startAutoPlay();
-}
-
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-
-if (prevBtn && nextBtn) {
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetAutoPlay();
-  });
-
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetAutoPlay();
-  });
-
-  const carouselWrapper = document.querySelector('.carousel-wrapper');
-  if (carouselWrapper) {
-    carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
-    carouselWrapper.addEventListener('mouseleave', startAutoPlay);
-  }
-
-  renderCarousel();
-  updateIndicators();
-  startAutoPlay();
-}
 
 // RENDEROVANJE DRUSTVENIH MREZA
 function renderSocials(containerId, socials) {
